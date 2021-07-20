@@ -6,9 +6,9 @@ function index_animation(){
 
     const tl = new TimelineMax();
 
-    tl.fromTo(title, 1.5, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
-    .fromTo(dance_doge, 1, {x: "-120%", opacity: 0}, {x: "0%", opacity: 1, ease:Power2.easeInOut})
-    .fromTo(introduction, 1, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut});
+    tl.fromTo(title, 1.2, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
+    .fromTo(dance_doge, 1.2, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
+    .fromTo(introduction, 1.2, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut});
 }
 
 function intro_animation(){
@@ -21,4 +21,20 @@ function intro_animation(){
     tl.fromTo(title, 1.5, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
     .fromTo(para_1, 1, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
     .fromTo(para_2, 1, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut});
+}
+
+function menu_animation(){
+    function TimelineY(selectedPart){
+        const tl = new TimelineMax();
+        tl.fromTo(selectedPart, 0.8, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
+    }
+
+    const tl = new TimelineMax();
+    const menu_heading = document.querySelector(".menu-heading");
+    const menu_lists_all = document.querySelectorAll(".menu-list");
+    menu_lists_all.forEach(TimelineY);
+    tl.fromTo(menu_heading, 0.8, {opacity: 0}, {opacity: 1, ease:Power2.easeInOut})
+    // for(let i = 0; i < menu_lists_all.length; i++){
+    //     tl.fromTo(menu_lists_all[i], 0.2, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, ease:Power2.easeInOut})
+    // }
 }
