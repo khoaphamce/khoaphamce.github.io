@@ -3,7 +3,7 @@
     /* background-image: linear-gradient(to bottom, rgba(209, 121, 236, 0.7), rgba(21, 4, 170, 0.5)), url("../images/cartoon_doge.png"); */
     background-position: center;
     background-size: 40%;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: #000000;
     color:rgb(0, 0, 0);
     display: block;
     margin-left:auto;

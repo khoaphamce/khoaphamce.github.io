@@ -7,7 +7,7 @@ body{
 
 .header{
     display: block;
-    font-size:24pt;
+    font-size:20pt;
     margin-left:auto;
     margin-right:auto;
     width: 100%;
@@ -15,7 +15,9 @@ body{
 }
 
 .nav_bar{
-    display: table;
+    display: grid;
+    grid-template-columns:repeat(5, 20%) ;
+    /* grid-auto-columns: 10%; */
     text-align: center;
     list-style-type:none;
     margin-left:auto;
@@ -23,14 +25,12 @@ body{
     background-image: linear-gradient(to bottom, rgba(209, 121, 236, 1), rgba(21, 4, 170, 0.5));
     width: 100%;
     /* background-color: rgba(21, 4, 170, 0.5); */
-    overflow-x: scroll;
-    /* margin: 0; */
+    padding: 0px;
 }
 
 li{
     margin-left: -.5px;
     margin-right: -.5px;
-    display: inline-block;
     border: 3px;
     border-color: black;
     /* background-color: rgba(21, 4, 170, 0.1); */
@@ -39,13 +39,13 @@ li{
 
 li a{
     display:block;
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-left: solid;
     border-right: solid;
     border-color: white;
-    border-width: 2px;
+    border-width: 1px;
     color: white;
     text-align: center;
     transition: 0.5s background-color;
@@ -65,7 +65,7 @@ a:hover{
     background-size: 20%;
     background-repeat:repeat;
     color:rgb(255, 255, 255);
-    font-size: 20pt;
+    font-size: 24pt;
     display: block;
     line-height: 65px;
     margin-left:auto;
@@ -122,7 +122,7 @@ a:hover{
 
 #introduction_head{
     -webkit-text-stroke-width: 0.4px;
-    font-size: 30pt;
+    font-size: 32pt;
     text-align: center;
 }
 #introduction_para{
@@ -153,11 +153,11 @@ a:hover{
 @media(max-width: 790px){
     .header{
         display:block;
-        font-size: 14pt;
+        font-size: 8pt;
+        width:100%;
     }
     
     .nav_bar{
-        display: table;
         text-align: center;
         padding: 0px;
         /* margin-left:auto;
@@ -170,28 +170,37 @@ a:hover{
     }
 
     li{
-        margin-left: -.5px;
-        margin-right: -.5px;
-        /* border: 40px; */
-        border-color: black;
-        display:list-item;
+        /* margin-left: -.5px;
+        margin-right: -.5px; */
+        /* border: 40px; */        
+        border: 0px;
+        /* display:list-item; */
         /* background-color: rgba(21, 4, 170, 0.1); */
         /* float:left; */
     }
 
     li a{
-        display:block;
         /* padding: 10px; */
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-left: none;
-        border-right: none;
-        border-bottom: solid;
-        border-color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
         color: white;
         text-align: center;
         transition: 0.5s background-color;
         text-decoration: none;
+    }
+
+    .title{
+        line-height: 50px;
+    }
+
+    #title_heading{
+        font-size: 30pt;
+    }
+
+    #title_para{
+        font-size:12pt;
     }
 
     .dance_doge{
@@ -209,7 +218,7 @@ a:hover{
 
     .introduction{
         -webkit-text-stroke-color: black;
-        line-height: 65px;
+        line-height: 30px;
         margin-left:auto;
         margin-right:auto;
         text-align: center;
@@ -220,14 +229,14 @@ a:hover{
 
     #introduction_head{
         -webkit-text-stroke-width: 0.5px;
-        font-size: 24pt;
+        font-size: 20pt;
         text-align: center;
     }
     #introduction_para{
-        font-weight: bold;
+        /* font-weight: bold; */
         -webkit-text-stroke-width: 0.5px;
         line-height: 45px;
-        font-size: 18pt;
+        font-size: 16pt;
     }
     
 }
